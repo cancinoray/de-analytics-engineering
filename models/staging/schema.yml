@@ -3,11 +3,12 @@ version: 2
 sources:
   - name: staging
     database: "{{ env_var('DBT_DATABASE', 'kestra-workflow-451204') }}"
-    schema: "{{ env_var('DBT_SCHEMA', 'zoomcamp') }}"
+    schema: "{{ env_var('DBT_SCHEMA', 'de_analytics_hwk') }}"
       # loaded_at_field: record_loaded_at
     tables:
       - name: green_tripdata
       - name: yellow_tripdata
+      - name: fhv_dataset
          # freshness:
            # error_after: {count: 6, period: hour}
 
